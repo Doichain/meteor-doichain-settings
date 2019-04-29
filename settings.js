@@ -1,9 +1,5 @@
 var Settings = new Meteor.Collection('Settings');
 
-//database overwrites settings.json
-//if db is empty json fills database
-//if json file is also empty uses given defaultValue for db
-
 export const name = 'settings';
 
 export function getSettings(_name,defaultValue){
