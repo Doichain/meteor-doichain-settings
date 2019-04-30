@@ -1,6 +1,6 @@
 Package.describe({
   name: 'doichain:settings',
-  version: '0.1.4',
+  version: '0.1.5',
   // Brief, one-line summary of the package.
   summary: 'Loads and provides settings',
   // URL to the Git repository containing the source code for this package.
