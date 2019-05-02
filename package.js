@@ -12,7 +12,7 @@ Package.describe({
 
 const use   = [
         'ecmascript',
-        'erasaur:meteor-lodash','4.0.0',
+        'erasaur:meteor-lodash@4.0.0',
     ];
 
 Package.onUse(function(api) {
