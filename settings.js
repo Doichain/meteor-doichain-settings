@@ -12,9 +12,13 @@ export function getSettings(_name,defaultValue){
     const settingsDbVAlue = Settings.findOne(selector);
     //console.log('db: app.debug:',settingsDbVAlue);
     if(settingsDbVAlue===undefined){
-        if(defaultValue!==undefined && settingsJsonValue!==undefined){
+        if(settingsJsonValue!==undefined){
             console.log('setting for '+_name +' not found in db - adding it.')
             Settings.insert({[_name]: settingsJsonValue});
+        }
+        if(defaultValue!==undefined && settingsJsonValue===undefined){
+            console.log('setting for '+_name +' not found in db - adding it.')
+            Settings.insert({[_name]: defaultValue});
         }
     }else{
         console.log('found settings for '+_name +' in db:',_.get(settingsDbVAlue,_name));
