@@ -1,3 +1,7 @@
 {
-  "testStreet": "Waldstraße 43"
+  "testStreet": "Waldstraße 43",
+  "app": {
+    "testCity": "Leipzig",
+    "testStreet": "Karl-Heine-Straße 55"
+  }
 }

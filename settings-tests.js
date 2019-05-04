@@ -41,4 +41,11 @@ describe('basic test', function () {
       expect(testStreet).to.equal("Karl Heine Straße 55");
     });
 
+    it('calls getSettings with existing value in json with points', function () {
+        const testCity = getSettings('app.testCity');
+        expect(testCity).to.equal("Leipzig");
+        const testStreet = getSettings('app.testStreet');
+        expect(testStreet).to.equal("Karl-Heine-Straße 55");
+    });
+
   });
