@@ -1,4 +1,4 @@
-import { name as packageName, getSettings,SettingsCollection } from "./settings";
+import { name as packageName, getSettings,SettingsCollection } from "./settings-server";
 import {chai} from 'meteor/practicalmeteor:chai';
 
 describe('basic test', function () {
