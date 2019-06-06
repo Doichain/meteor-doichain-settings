@@ -13,7 +13,7 @@ import {getSettings } from 'meteor/doichain:settings';
 
 const defaultValue = 'what-ever-it-should-be-in-case whether its in settings.json nor in db)
 const settingsValue = getSettings('settings.name',defaultValue);
-```
+``` 
  
 
 # TODO
