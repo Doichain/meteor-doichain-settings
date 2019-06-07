@@ -1,6 +1,6 @@
 Package.describe({
   name: 'doichain:settings',
-  version: '0.2.10',
+  version: '0.2.12',
   summary: 'Loads and provides settings from settings json or alternatively from db',
   git: 'https://github.com/Doichain/meteor-doichain-settings.git',
   documentation: 'README.md'
@@ -19,7 +19,8 @@ Npm.depends({
     'lodash':'4.17.11',
     'react':'16.8.6',
     'react-dom':'16.8.6',
-    'react-table':'6.10.0'
+    'react-table':'6.10.0',
+    'react-meteor-hooks':'0.2.1'
 });
 
 /**
