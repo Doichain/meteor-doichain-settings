@@ -5,15 +5,16 @@ import {Settings} from './imports/api/settings/settings'
 import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
 checkNpmVersions({
     'react': '16.8.6',
-    'react-dom': '16.8.6'
-}, 'react');
+    'react-dom': '16.8.6',
+    'react-meteor-hooks:':'0.3.1'
+}, 'doichain:settings');
 
 import {useSubscription,useTracker} from "react-meteor-hooks"
 
 const SettingsTable = props => {
 
-     const loading = useSubscription('settings')
-     const settings = useTracker(() => Settings.find().fetch())
+    const loading = useSubscription('settings')
+    const settings = useTracker(() => Settings.find().fetch())
      // const settings = []
     const listItems = settings.map((configItem) =>
         <li>{configItem.key}: {configItem.value}</li>
@@ -40,14 +41,10 @@ const SettingsTable = props => {
                 defaultPageSize={10}
                 className="-striped -highlight"
             />
-
-            <ListItems settings={settings}/>
-
-
-        </Fragment>
+         </Fragment>
     )
 }
-
+/* <ListItems settings={settings}/> */
 export default SettingsTable
 
 function ListItems(props){

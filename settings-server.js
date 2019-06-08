@@ -2,10 +2,6 @@ import {Meteor} from "meteor/meteor";
 import { _ } from 'lodash';
 import {Settings} from './imports/api/settings/settings'
 import './imports/api/settings/server/publications';
-import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
-checkNpmVersions({
-    'react-meteor-hooks:':'0.3.1'
-})
 
 export function getSettings(_name,defaultValue) {
     const settingsAll = (process.env.TEST_METEOR_SETTINGS!==undefined)?JSON.parse(process.env.TEST_METEOR_SETTINGS):Meteor.settings;
