@@ -17,10 +17,7 @@ Package.onUse(function(api) {
 
 Npm.depends({
     'lodash':'4.17.11',
-    'react':'16.8.6',
-    'react-dom':'16.8.6',
-    'react-table':'6.10.0',
-    'react-meteor-hooks':'0.2.1'
+    'react-table':'6.10.0'
 });
 
 /**
