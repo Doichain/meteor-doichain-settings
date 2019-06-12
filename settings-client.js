@@ -15,17 +15,24 @@ const SettingsTable = props => {
 
     const loading = useSubscription('settings')
     const settings = useTracker(() => Settings.find().fetch())
-     // const settings = []
-    const listItems = settings.map((configItem) =>
-        <li>{configItem.key}: {configItem.value}</li>
-    );
-    //return (meta.length>0?(JSON.parse(meta[0].value)):'not available');
+    const listItems = []
+
+    settings.map((configItem) => {
+            const thisItem = {key: configItem.key}
+            if(configItem.value instanceof Object)
+                thisItem.value = JSON.stringify(configItem.value)
+            else
+                thisItem.value = configItem.value
+
+        listItems.push(thisItem)
+    })
+
     return (
         <Fragment>
             <h1>SettingTable coming soon!</h1>
 
             <ReactTable
-                data={settings}
+                data={listItems}
                 columns={[
                     {
                         Header: "ConfigKey",
@@ -44,12 +51,4 @@ const SettingsTable = props => {
          </Fragment>
     )
 }
-/* <ListItems settings={settings}/> */
 export default SettingsTable
-
-function ListItems(props){
-    const listItems = props.settings.map((configItem) =>
-        <li key={configItem.key}>{configItem.key}: {configItem.value}</li>
-    );
-    return listItems;
-}
