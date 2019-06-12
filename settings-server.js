@@ -21,7 +21,8 @@ export function getSettings(_name,defaultValue) {
     console.log('settingsDbVAlue found:', settingsDbVAlue?settingsDbVAlue.value:undefined);
     if (settingsDbVAlue === undefined || settingsDbVAlue.value === undefined) {
         if (settingsJsonValue !== undefined && settingsJsonValue !=="") {
-            const data = {key: _name, value: (settingsJsonValue instanceof Object?JSON.stringify(settingsJsonValue):settingsJsonValue)}
+           // const settingValue = (settingsJsonValue instanceof Object?JSON.stringify(settingsJsonValue):settingsJsonValue);
+            const data = {key: _name, value: settingsJsonValue}
             console.log(_name + ' not in db - but in json - adding it:' + JSON.stringify(data));
             Settings.insert(data);
         }

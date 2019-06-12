@@ -26,7 +26,7 @@ Settings.deny({
   update() { return true; },
   remove() { return true; },
 });
-
+/*
 Settings.schema = new SimpleSchema({
   _id: {
     type: String,
@@ -51,7 +51,7 @@ Settings.schema = new SimpleSchema({
   },
 });
 
-Settings.attachSchema(Settings.schema);
+Settings.attachSchema(Settings.schema); */
 
 // This represents the keys Settings Meta objects that should be published
 // to the client. If we add secret properties to Meta objects, don't list
