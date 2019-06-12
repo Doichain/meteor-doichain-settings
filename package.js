@@ -1,6 +1,6 @@
 Package.describe({
   name: 'doichain:settings',
-  version: '0.2.15',
+  version: '0.2.16',
   summary: 'Loads and provides settings from settings json or alternatively from db',
   git: 'https://github.com/Doichain/meteor-doichain-settings.git',
   documentation: 'README.md'
