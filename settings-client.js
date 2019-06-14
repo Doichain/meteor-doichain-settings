@@ -26,10 +26,10 @@ const SettingsTable = props => {
 
         listItems.push(thisItem)
     })
-
+    //TODO https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/archives/v6-examples/react-table-editable-content
     return (
         <Fragment>
-            <h1>SettingTable coming soon!</h1>
+            <h1>SettingTable</h1>
 
             <ReactTable
                 data={listItems}
