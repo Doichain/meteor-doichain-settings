@@ -1,13 +1,13 @@
 Package.describe({
   name: 'doichain:settings',
-  version: '0.2.17',
+  version: '0.2.18',
   summary: 'Loads and provides settings from settings json or alternatively from db',
   git: 'https://github.com/Doichain/meteor-doichain-settings.git',
   documentation: 'README.md'
 });
 
 const use   = ['ecmascript',
-               'alanning:roles'];
+               'alanning:roles@1.2.16'];
 
 Package.onUse(function(api) {
   api.versionsFrom('1.8.1');
