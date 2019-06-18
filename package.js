@@ -6,7 +6,8 @@ Package.describe({
   documentation: 'README.md'
 });
 
-const use   = ['ecmascript'];
+const use   = ['ecmascript',
+               'alanning:roles'];
 
 Package.onUse(function(api) {
   api.versionsFrom('1.8.1');
@@ -17,7 +18,7 @@ Package.onUse(function(api) {
 
 Npm.depends({
     'lodash':'4.17.11',
-    'react-table':'6.10.0'
+    'react-table':'6.10.0',
 });
 
 /**
