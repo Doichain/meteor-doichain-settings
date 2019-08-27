@@ -19,10 +19,27 @@ class SettingsCollection extends Mongo.Collection {
 
 export const Settings = new SettingsCollection('settings');
 
-// Deny all client-side updates since we will be using methods to manage this collection
+Settings.allow({
+  insert(userId, doc) {
+    // The user must be logged in and the document must be owned by the user.
+    return false; //userId && doc.owner === userId;
+  },
+
+  update(userId, doc, fields, modifier) {
+    // Can only change your own documents.
+    return Roles.userIsInRole(userId, ['admin']) //doc.owner === userId;
+  },
+
+  remove(userId, doc) {
+    // Can only remove your own documents.
+    return false;//doc.owner === userId;
+  }
+});
 Settings.deny({
   insert() { return true; },
-  update() { return true; },
+  update() {
+    return Roles.userIsInRole(this.userId, ['admin'])
+  },
   remove() { return true; },
 });
 

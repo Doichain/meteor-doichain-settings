@@ -1,13 +1,12 @@
 Package.describe({
   name: 'doichain:settings',
-  version: '0.2.18',
+  version: '0.3.0',
   summary: 'Loads and provides settings from settings json or alternatively from db',
   git: 'https://github.com/Doichain/meteor-doichain-settings.git',
   documentation: 'README.md'
 });
 
-const use   = ['ecmascript',
-               'alanning:roles@1.2.16'];
+const use   = ['ecmascript','alanning:roles@1.2.16'];
 
 Package.onUse(function(api) {
   api.versionsFrom('1.8.1');
@@ -18,7 +17,9 @@ Package.onUse(function(api) {
 
 Npm.depends({
     'lodash':'4.17.11',
-    'react-table':'6.10.0',
+    "react-table": "7.0.0-alpha.27",
+    "react-scripts": "3.1.1",
+    "styled-components": "4.3.2"
 });
 
 /**
