@@ -10,7 +10,7 @@ checkNpmVersions({
     'react-dom': '16.8.6',
     'react-meteor-hooks:':'0.3.1',
     "react-scripts": "3.1.1",
-    "react-table": "7.0.0-alpha.27"
+    "react-table": "7.0.0-alpha.30"
 }, 'doichain:settings');
 
 const Styles = styled.div`
