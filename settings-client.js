@@ -156,9 +156,9 @@ const SettingsTable = props => {
     // the rowIndex, columnID and new value to update the
     // original data
     const updateMyData = (rowIndex, columnID, value) => {
-        // We also turn on the flag to not reset the page
         skipPageResetRef.current = true
-        console.log("updating id: "+listItems[rowIndex]._id+" data with value: "+value+" and key:",listItems[rowIndex].key)
+        value = (value==='true')?true:value
+        value = (value==='false')?false:value
         Settings.update({_id: listItems[rowIndex]._id},{$set:{value:value}})
 
       /*  setData(old =>
